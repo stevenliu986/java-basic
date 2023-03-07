@@ -1,7 +1,5 @@
 package com.test.block;
 
-import java.sql.SQLOutput;
-
 /**
  * ClassName: GrandChild
  * Package: com.test.block
@@ -10,7 +8,7 @@ import java.sql.SQLOutput;
  * @Author: Steven_LIU
  * @Create: 10/01/2023
  */
-public class GrandChild extends Son1{
+public class GrandChild extends Son1 {
     static {
         System.out.println("777777777777");
     }
@@ -29,7 +27,7 @@ public class GrandChild extends Son1{
     }
 }
 
-class Father1{
+class Father1 {
     static {
         System.out.println("111111111111");
     }
@@ -42,7 +40,7 @@ class Father1{
     }
 }
 
-class Son1 extends Father1{
+class Son1 extends Father1 {
     static {
         System.out.println("444444444444444444");
     }
@@ -54,4 +52,3 @@ class Son1 extends Father1{
         System.out.println("66666666666666666");
     }
 }
-

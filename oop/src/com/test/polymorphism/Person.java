@@ -1,7 +1,5 @@
 package com.test.polymorphism;
 
-import java.util.Objects;
-
 /**
  * ClassName: Person
  * Package: com.test.polymorphism
@@ -14,11 +12,11 @@ public class Person {
     String name;
     int age;
 
-    public void eat(){
+    public void eat() {
         System.out.println("人：吃饭");
     }
 
-    public void walk(){
+    public void walk() {
         System.out.println("人：走路");
     }
 
@@ -28,8 +26,10 @@ public class Person {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         Person person = (Person) o;
         return age == person.age && name.equals(person.name);
     }

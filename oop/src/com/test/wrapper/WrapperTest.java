@@ -1,6 +1,6 @@
 package com.test.wrapper;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 /**
  * ClassName: WrapperTest
@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
  * @Author: Steven_LIU
  * @Create: 9/01/2023
  *
- * String类，包装类与基本数据类型间的转换
+ *          String类，包装类与基本数据类型间的转换
  *
  */
 public class WrapperTest {
@@ -18,7 +18,7 @@ public class WrapperTest {
      * 基本数据类型 => 包装类
      */
     @Test
-    public void test1(){
+    public void test1() {
         // 自动装箱
         Integer integer1 = 10;
         // 自动拆箱
@@ -30,10 +30,10 @@ public class WrapperTest {
     }
 
     /**
-     * 基本数据类型,包装类  => String类
+     * 基本数据类型,包装类 => String类
      */
     @Test
-    public void test2(){
+    public void test2() {
         int num1 = 10;
         String str1 = num1 + "";
         float f1 = 12.3f;
@@ -43,10 +43,10 @@ public class WrapperTest {
     }
 
     /**
-     * String类  => 基本数据类型,包装类
+     * String类 => 基本数据类型,包装类
      */
     @Test
-    public void test3(){
+    public void test3() {
         String str1 = "123";
         int num1 = Integer.parseInt(str1);
         double d1 = Double.parseDouble(str1);
@@ -57,13 +57,13 @@ public class WrapperTest {
     }
 
     @Test
-    public void test4(){
-        Object o1 = true?new Integer(1): new Double(2.0);
+    public void test4() {
+        Object o1 = true ? new Integer(1) : new Double(2.0);
         System.out.println(o1);
     }
 
     @Test
-    public void test5(){
+    public void test5() {
         Integer i = new Integer(1);
         Integer j = new Integer(1);
         System.out.println(i == j);
