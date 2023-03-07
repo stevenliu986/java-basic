@@ -58,6 +58,29 @@ public class ReflectionTest {
     Method showAge = clazz.getDeclaredMethod("showAge", Integer.class);
     showAge.setAccessible(true);
     showAge.invoke(person02, 45);
+  }
 
+  /**
+   * 获取Class的实例的方式
+   */
+  @Test
+  public void test03() throws ClassNotFoundException {
+    // 方式一：调用运行时类的属性 - .class
+    Class<Person> clazz01 = Person.class;
+    System.out.println(clazz01);
+
+    // 方式二：调用运行时类的对象，调用getClass()
+    Person person01 = new Person();
+    Class clazz02 = person01.getClass();
+    System.out.println(clazz02);
+
+    // 方式三：调用Class的静态方法 - forName(String classPath)
+    Class clazz03 = Class.forName("com.test.reflection.Person");
+    System.out.println(clazz03);
+
+    // 方式四：使用类的加载器 - ClassLoader
+    ClassLoader classLoader = ReflectionTest.class.getClassLoader();
+    Class clazz04 = classLoader.loadClass("com.test.reflection.Person");
+    System.out.println(clazz04);
   }
 }
